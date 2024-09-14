@@ -1,12 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from PyInstaller.utils.hooks import collect_submodules
+
+# Collect all submodules of babel to include in the build
+hiddenimports = collect_submodules('babel')
 
 a = Analysis(
     ['hmsgui.py'],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=[],
+    hiddenimports=hiddenimports,  # Add babel submodules here
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
