@@ -7,10 +7,10 @@ from mysql.connector import Error
 
 def get_connection():
     """Establishes and returns a new database connection."""
-    return mysql.connector.connect(host="sql12.freemysqlhosting.net",
-                                   user="sql12731202",
-                                   password="jHmCD3Vye7",
-                                   database="sql12731202")
+    return mysql.connector.connect(host="",
+                                   user="",
+                                   password="",
+                                   database="")
 
 # Function to Add Patient
 def add_patient(name, age, gender, contact, address):
